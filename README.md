@@ -9,6 +9,10 @@ Contains additional apt installed packages:
 - libtool
 - curl
 - unzip
+- make
+- gcc
+- g++
+- build-essential
 - git
 
 Installed from GitHub sources:

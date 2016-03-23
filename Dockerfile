@@ -8,6 +8,10 @@
 #	libtool
 #	curl
 #	unzip
+# 	make
+#	gcc
+#	g++
+#	build-essential	
 #	git
 #
 # Installs from GitHub source
