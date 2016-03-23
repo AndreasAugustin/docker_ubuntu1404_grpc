@@ -1,21 +1,17 @@
-# docker_ubuntu1404_grpc
-Dockerfile for ubuntu 14.04 image with grpc
+# About this repo
 
-Modified Ubuntu 14.04 image.
+This is the Git repo containing the official Docker images for [grpc][].
 
-Contains additional apt installed packages:
-- autoconf
-- automake
-- libtool
-- curl
-- unzip
-- make
-- gcc
-- g++
-- build-essential
-- git
 
-Installed from GitHub sources:
-- protobuf version 3 (https://github.com/google/protobuf)
-- grpc (https://github.com/grpc/grpc/tree/release-0_13/src/cpp)
+# What is gRPC ?
 
+A high performance, open source, general RPC framework that puts mobile and
+HTTP/2 first, available in many programming languages.  For full details, see
+the official [gRPC documentation][].
+
+
+
+[docker-library]:https://github.com/docker-library
+[grpc]:http:/grpc.io
+[official docker images]:https://github.com/docker-library/official-images
+[grpc documentation]:http://www.grpc.io/docs/
