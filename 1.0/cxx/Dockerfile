@@ -1,8 +1,9 @@
 #################################################################
-# Dockerizing GRPC: Dockerfile for building Ubuntu14.04 images with ready to use grpc
+# Dockerizing GRPC: Dockerfile for building Ubuntu14.04 image with ready to use grpc and proto3
+# 
 # Based on ubuntu:latest
 # 
-# Installs apt packages
+# Installation apt packages
 #	autoconf
 #	automake
 #	libtool
@@ -14,12 +15,12 @@
 #	build-essential	
 #	git
 #
-# Installs from GitHub source
+# Installation from source
 #	protobuf version 3 (https://github.com/google/protobuf)
 #	grpc (https://github.com/grpc)
 #################################################################
 # author: andyAugustin
-# email: andv.augustin@t-online.de
+# email: andy.augustin@t-online.de
 # license: MIT
 ################################################################i
 
