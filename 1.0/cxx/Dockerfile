@@ -50,9 +50,12 @@ RUN mkdir ${TMP_DIRECTORY}
 RUN cd ${TMP_DIRECTORY} && git clone https://github.com/google/protobuf.git && cd ${TMP_DIRECTORY}/protobuf \ 
 	&& ./autogen.sh && ./configure && make && make check && make install && ldconfig
 
+ENV GRPC_RELEASE_TAG release-0_13_0
+
 # Install grpc
 RUN cd ${TMP_DIRECTORY} && git clone https://github.com/grpc/grpc.git && cd ${TMP_DIRECTORY}/grpc \
-	&& git submodule update --init && make && make install
+	&& git checkout tags/${GRPC_RELEASE_TAG} \
+        && git submodule update --init && make && make install
 
 # Tear down
 RUN rm -rf ${TMP_DIRECTORY}
