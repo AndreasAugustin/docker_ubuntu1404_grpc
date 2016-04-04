@@ -41,6 +41,8 @@ RUN apt-get update && apt-get install -y \
 	build-essential \
 	git  && apt-get clean
 
+ENV PROTO_RELEASE_TAG v3.0.0-beta-2
+ENV GRPC_RELEASE_TAG release-0_13_1
 
 ENV TMP_DIRECTORY /home/tmp
 
@@ -48,9 +50,9 @@ RUN mkdir ${TMP_DIRECTORY}
 
 # Install proto3
 RUN cd ${TMP_DIRECTORY} && git clone https://github.com/google/protobuf.git && cd ${TMP_DIRECTORY}/protobuf \ 
-	&& ./autogen.sh && ./configure && make && make check && make install && ldconfig
+	&& git checkout tags/${PROTO_RELEASE_TAG} \
+        && ./autogen.sh && ./configure && make && make check && make install && ldconfig
 
-ENV GRPC_RELEASE_TAG release-0_13_0
 
 # Install grpc
 RUN cd ${TMP_DIRECTORY} && git clone https://github.com/grpc/grpc.git && cd ${TMP_DIRECTORY}/grpc \
