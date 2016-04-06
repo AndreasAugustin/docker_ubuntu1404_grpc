@@ -23,7 +23,7 @@
 # license: MIT
 ################################################################i
 
-FROM ubuntu:latest
+FROM ubuntu:14.04
 
 MAINTAINER andyAugustin<andy.augustin@t-online.de>
 
