@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t andyaugustin/docker_ubuntu14.04_grpc -f ./1.0/cxx .
+  - docker build -t andyaugustin/docker_ubuntu14.04_grpc  ./1.0/cxx
   - docker run -d -p 127.0.0.1:80 4567 andyaugustin/docker_ubuntu14.04_grpc 
   - docker ps -a
 
