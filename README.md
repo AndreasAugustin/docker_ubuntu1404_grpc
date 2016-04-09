@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/AndreasAugustin/docker_ubuntu1404_grpc.svg?branch=master)](https://travis-ci.org/AndreasAugustin/docker_ubuntu1404_grpc)
+
 # About this repo
 
 This is the Git repo containing the official Docker images for [grpc][].
