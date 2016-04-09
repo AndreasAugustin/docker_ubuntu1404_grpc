@@ -1,8 +1,13 @@
 sudo: required
 
+language: ruby
+
 services:
   - docker
 
 before_install:
-  - docker build -t andyaugustin/docker_ubuntu14.04_grpc  ./1.0/cxx
+  - docker build -t andyaugustin/docker_ubuntu14.04_grpc ./1.0/cxx
+
+script:
+  - bundle exec rake test
 

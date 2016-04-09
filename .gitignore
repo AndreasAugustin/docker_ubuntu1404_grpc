@@ -1,0 +1,8 @@
+
+
+*.iml
+
+.idea/
+
+.rspec
+Gemfile.lock
