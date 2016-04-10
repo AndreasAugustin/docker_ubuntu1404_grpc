@@ -15,9 +15,10 @@ describe "DockerImage" do
     end
   end
 
-=begin
+
   it "image exists" do
-    expect(@imageToTest).to exist
+    assert(@imageToTest).to exist
+    assert(false).to be true
   end
-=end
+
 end
