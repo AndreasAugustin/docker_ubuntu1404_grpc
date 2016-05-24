@@ -40,18 +40,13 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     git  && apt-get clean
 
-ENV GRPC_RELEASE_TAG release-0_13_1
-
-ENV TMP_DIRECTORY /home/tmp
-
-RUN mkdir ${TMP_DIRECTORY}
+ENV GRPC_RELEASE_TAG release-0_13_1 \
+    TMP_DIRECTORY /home/tmp
 
 # Install grpc
-RUN cd ${TMP_DIRECTORY} && git clone https://github.com/grpc/grpc.git && cd ${TMP_DIRECTORY}/grpc \
+RUN mkdir ${TMP_DIRECTORY} \
+    && cd ${TMP_DIRECTORY} && git clone https://github.com/grpc/grpc.git && cd ${TMP_DIRECTORY}/grpc \
     && git checkout tags/${GRPC_RELEASE_TAG} \
-    && git submodule update --init && make && make install
-
-# Tear down
-RUN rm -rf ${TMP_DIRECTORY}
-
+    && git submodule update --init && make && make install \
+    && rm -rf ${TMP_DIRECTORY}
 
