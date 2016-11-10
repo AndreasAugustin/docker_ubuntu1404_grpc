@@ -40,8 +40,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     git  && apt-get clean
 
-ENV GRPC_RELEASE_TAG release-0_13_1
-ENV TMP_DIRECTORY /home/tmp
+ARG GRPC_RELEASE_TAG v1.0.1
+ARG TMP_DIRECTORY /home/tmp
 
 # Install grpc
 RUN mkdir "${TMP_DIRECTORY}" \
